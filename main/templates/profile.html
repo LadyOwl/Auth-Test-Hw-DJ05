@@ -1,9 +1,9 @@
-<!-- profile.html -->
+<!-- main/templates/profile.html -->
 {% extends 'base.html' %}
 
 {% block content %}
 <h1>Your Profile</h1>
-<p>Username: {{ user.username }}</p>
-<p>Email: {{ user.email }}</p>
-<a href="{% url 'logout' %}">Logout</a>
+<p><strong>Username:</strong> {{ user.username }}</p>
+<p><strong>Email:</strong> {{ user.email|default:"Not set" }}</p>
+<a href="{% url 'logout' %}" class="btn btn-outline-secondary">Logout</a>
 {% endblock %}
