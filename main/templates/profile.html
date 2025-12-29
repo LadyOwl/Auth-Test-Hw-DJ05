@@ -4,6 +4,7 @@
 {% block content %}
 <h1>Your Profile</h1>
 <p><strong>Username:</strong> {{ user.username }}</p>
-<p><strong>Email:</strong> {{ user.email|default:"Not set" }}</p>
+<p><strong>Email:</strong> {{ user.email }}</p>
+<p><strong>Phone:</strong> {{ user.phone_number|default:"Not provided" }}</p>
 <a href="{% url 'logout' %}" class="btn btn-outline-secondary">Logout</a>
 {% endblock %}
