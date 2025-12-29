@@ -107,3 +107,5 @@ STATIC_URL = 'static/'
 
 # Authentication settings
 LOGIN_URL = 'login'
+
+AUTH_USER_MODEL = 'main.CustomUser'
